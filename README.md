@@ -36,7 +36,7 @@ In this part of the project, I demonstrate how the C# program creates a separate
 
 
 
-## Maintaing Persistence with a Keylogger 
+## Maintaining Persistence with a Keylogger 
 
 In this section, I demonstrate how a keylogger can maintain persistence on a machine without the user’s knowledge. Following the Cyber Kill Chain model, the "Delivery" phase is where the malware is introduced to the system. This could happen if a threat actor plugs in a USB drive containing the malicious file or sends a convincing phishing email. Once executed, the malware could leverage the Installation phase, where it establishes persistence via the Task Scheduler. The attacker would create a new task, set it to trigger at user logon, and select the malicious program to run automatically. When the user logs in, the keylogger silently captures keystrokes and sends the data back to the attacker’s email, all without the user’s awareness. This demonstrates the significant danger posed by keyloggers, as they can remain undetected and continue to exfiltrate data.
 
