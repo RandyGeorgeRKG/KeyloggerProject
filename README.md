@@ -50,3 +50,7 @@ In this section, I demonstrate how to check a program or file on VirusTotal to d
 ![image](https://github.com/user-attachments/assets/5d358999-1eda-4500-9a6f-438f954f6ae7)
 
 
+## Best Practices against keylogger Malware 
+
+When it comes to defending against keylogger malware, there are several practices you can implement to help mitigate this threat within your organization. One effective control is enabling two-factor authentication (2FA). Utilizing multiple forms of 2FA across your accounts provides an additional layer of security, making it much harder for keyloggers to compromise your credentials. Another important measure is using application whitelisting, which prevents unauthorized applications from being executed on your machine. Limiting user privileges is also crucial, as it ensures that only authorized individuals have administrative access, reducing the risk of malicious software being installed. Additionally, using reputable antivirus and anti-malware software, along with ensuring that system and software updates are enabled, is essential for detecting and preventing infections. While there are many other practices that can help protect against keylogger malware, these are some of the most effective and relevant in today’s threat landscape.
+
