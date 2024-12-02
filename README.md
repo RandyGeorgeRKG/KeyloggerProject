@@ -20,15 +20,28 @@ Additionally, I show how to upload a suspicious file or program to VirusTotal, d
 
 
 ## KeyLogger C# Code Showcase 
-![Screenshot 2024-12-02 000829](https://github.com/user-attachments/assets/0032a777-99f7-418e-a4ef-df12236657c6)
 
 In this part of the C# keylogger program, I’ve set up some key configurations to control how it works. First, I defined the email settings with `FROM_EMAIL_ADDRESS`, `FROM_EMAIL_PASSWORD`, and `TO_EMAIL_ADDRESS`, which are used to send the captured keystrokes to a specific email. The log files are stored at paths defined by `LOG_FILE_NAME` and `ARCHIVE_FILE_NAME`, and I use `INCLUDE_LOG_AS_ATTACHMENT` to decide if the log should be attached to the email. The project sends the logs when they reach `MAX_LOG_LENGTH_BEFORE_SENDING_EMAIL` (300 keystrokes), and `MAX_KEYSTROKES_BEFORE_WRITING_TO_LOG` controls how soon the keystrokes are written to the log file. I’ve also set up a low-level keyboard hook with constants like `WH_KEYBOARD_LL` and `WM_KEYDOWN to capture keystrokes globally. The `hook` and `llkProcedure` variables handle the actual capturing and processing of each keystroke. Lastly, the `buffer` stores the keystrokes temporarily before they’re logged or emailed. These configurations work together to manage logging, email sending, and real-time keystroke capture for the keylogger.
+
+![Screenshot 2024-12-02 000829](https://github.com/user-attachments/assets/0032a777-99f7-418e-a4ef-df12236657c6)
 
 
 
 ## KeyLogger In Action
+In this part of the project, I demonstrate how the C# program creates a separate window using Visual Studio Community Edition. Additionally, I show how every keystroke made on the machine is recorded in real-time, and the logs are subsequently sent to my email address.
+
 
 ![Screenshot 2024-12-02 001809](https://github.com/user-attachments/assets/2a3d22ad-50e2-458b-8c81-af322a0e902c)
 ![Mail ](https://github.com/user-attachments/assets/c9ba1c6c-aebf-4ac5-a0ad-123c113776c2)
 
-In this part of the project, I demonstrate how the C# program creates a separate window using Visual Studio Community Edition. Additionally, I show how every keystroke made on the machine is recorded in real-time, and the logs are subsequently sent to my email address.
+
+
+## Maintaing Persistence with a Keylogger 
+
+In this section, I demonstrate how a keylogger can maintain persistence on a machine without the user’s knowledge. Following the Cyber Kill Chain model, the "Delivery" phase is where the malware is introduced to the system. This could happen if a threat actor plugs in a USB drive containing the malicious file or sends a convincing phishing email. Once executed, the malware could leverage the Installation phase, where it establishes persistence via the Task Scheduler. The attacker would create a new task, set it to trigger at user logon, and select the malicious program to run automatically. When the user logs in, the keylogger silently captures keystrokes and sends the data back to the attacker’s email, all without the user’s awareness. This demonstrates the significant danger posed by keyloggers, as they can remain undetected and continue to exfiltrate data.
+
+![At Log on ](https://github.com/user-attachments/assets/37d2515f-3012-42a6-826c-a9d5c0bfdfaf)
+![Select the file ](https://github.com/user-attachments/assets/605c1785-0122-4929-8ee8-dcf10ed05f04)
+
+
+
