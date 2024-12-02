@@ -45,6 +45,8 @@ In this section, I demonstrate how a keylogger can maintain persistence on a mac
 
 
 ## Displaying the Keylogger Malware on VirsuTotal 
+In this section, I demonstrate how to check a program or file on VirusTotal to determine if it contains any malware. Although my malware was custom-built and designed to avoid detection by signature-based scanners, it appears that VirusTotal flagged it using heuristic and behavioral analysis techniques. Heuristic scanning detects suspicious patterns or behaviors that are typical of malware, even if the file doesn't match any known signatures. Additionally, some antivirus engines used by VirusTotal may incorporate behavioral analysis, which looks for actions that the malware takes when executed, such as altering system settings or communicating with external servers. This highlights the effectiveness of heuristic and behavior-based detection methods in identifying previously unknown or custom-built threats, emphasizing the growing importance of these techniques in modern malware analysis.
 
+![image](https://github.com/user-attachments/assets/5d358999-1eda-4500-9a6f-438f954f6ae7)
 
 
